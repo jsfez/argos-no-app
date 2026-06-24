@@ -16,6 +16,6 @@ jobs:
       - name: Check out repository code
         uses: actions/checkout@v6
 
-      - run: npx @argos-ci/cli upload ./screenshots
+      - run: DEBUG=@argos-ci/core npx @argos-ci/cli upload ./screenshots
         env:
           ARGOS_TOKEN: ${{ secrets.ARGOS_TOKEN }}
